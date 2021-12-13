@@ -52,8 +52,8 @@ if [ -z "$_driver_version" ] || [ "$_driver_version" = "latest" ] || [ -z "$_dri
   fi
     # This will be treated as the latest regular driver.
     if [ "$CONDITION" = "2" ]; then
-      echo '_driver_version=495.44' > options
-      echo '_md5sum=3730580acbd0d2145e870f7896d4db83' >> options
+      echo '_driver_version=495.48' > options
+      echo '_md5sum=SKIP' >> options
       echo '_driver_branch=regular' >> options
     elif [ "$CONDITION" = "3" ]; then
       echo '_driver_version=470.86' > options
