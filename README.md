@@ -36,6 +36,16 @@ DKMS is recommended as it allows for automatic module rebuilding on kernel updat
 - A great tool exists for you and works with these nvidia-all packages: https://github.com/Askannz/optimus-manager
 - 435.17 beta has introduced PRIME render offload support. You can learn more about the needed setup here: http://us.download.nvidia.com/XFree86/Linux-x86_64/435.17/README/primerenderoffload.html
 
+If you need to run anything with an NVIDIA GPU, just use the command below. Remember, after ```program``` just type any package.
+
+```
+__NV_PRIME_RENDER_OFFLOAD=1 __GLX_VENDOR_LIBRARY_NAME=nvidia program
+```
+Example 1: Xonotic game runs on NVIDIA GPU.
+```
+__NV_PRIME_RENDER_OFFLOAD=1 __GLX_VENDOR_LIBRARY_NAME=nvidia xonotic-sdl
+```
+
 # Mostlyportable-gcc users :
 - For non-dkms nvidia-all packages, setting your `CUSTOM_GCC_PATH` in .cfg is enough.
 - For dkms nvidia-all packages, you'll need to make DKMS aware of your mostlyportable-gcc build. See: https://github.com/Tk-Glitch/PKGBUILDS/issues/334#issuecomment-537197636
